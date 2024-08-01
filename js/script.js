@@ -1,40 +1,59 @@
-function ValidateForm(){
-    const form = document.querySelector('.main-form');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const selectInput = document.getElementById('select');
-    const sendButton = document.getElementById('send');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+// menampilkan banner auto slide
+let currentIndex = 0;
+const banners = document.querySelectorAll('.banner');
+const totalBanners = banners.length;
 
-        let isValid = true;
-        let errorMessage = '';
+function showNextBanner() {
+    banners[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % totalBanners;
+    banners[currentIndex].classList.add('active');
+}
 
-        // Name validation
-        if (nameInput.value.trim() === '') {
-            isValid = false;
-            errorMessage += 'Please enter your name.\n';
-        }
+setInterval(showNextBanner, 3000);
 
-        // Email validation
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(emailInput.value)) {
-            isValid = false;
-            errorMessage += 'Please enter a valid email address.\n';
-        }
 
-        // Select validation
-        if (selectInput.value === 'Select option') {
-            isValid = false;
-            errorMessage += 'Please select an option.\n';
-        }
 
-        if (!isValid) {
-            alert(errorMessage);
-        } else {
-            alert('Thank you for contacting us!');
-            form.reset();
-        }
-    });
+// validasi form
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    //hapus pesan eror
+    document.getElementById('nameError').innerText = '';
+    document.getElementById('emailError').innerText = '';
+    document.getElementById('selectError').innerText = '';
+
+    // value form
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var select = document.getElementById('select').value;
+
+    var isValid = true;
+    if (name.trim() === '') {
+        document.getElementById('nameError').innerText = 'Please enter your name.';
+        isValid = false;
+    }
+
+    if (email.trim() === '') {
+        document.getElementById('emailError').innerText = 'Please enter your email.';
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        document.getElementById('emailError').innerText = 'Please enter a valid email address.';
+        isValid = false;
+    }
+
+    if (select === '') {
+        document.getElementById('selectError').innerText = 'Please select an option.';
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert('Thank you for contacting us!');
+    }
+});
+
+// valid email
+function validateEmail(email) {
+    var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return re.test(email);
 }
