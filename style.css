@@ -1,0 +1,447 @@
+body{
+    background-color: rgb(58, 73, 73);
+    color:white;
+}
+
+/* nav */
+nav{
+    background-color:#e57727;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+    align-items: center;
+}
+.logo-icon{
+    width: 150px;
+    height: 50px;
+    background-image: url(https://i.pinimg.com/564x/73/97/1e/73971ef28c30683dbbf103a8b863699b.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-left: 20px;
+}
+.nav-container{
+    display: inline-flex;
+}
+.nav-item{
+    font-size: medium;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+}
+.nav-item:hover{
+    color: rgb(200, 173, 40);
+    background-color: rgb(36, 41, 39);
+    cursor: pointer;
+} 
+
+/* title */
+.main-title{
+    text-align: center;
+    font-size: 27px;
+    font-family: Gill Sans MT;
+    padding-top: 20px;
+    
+}
+.second-title{
+    padding-top: 15px;
+    padding-bottom: 35px;
+    text-align: center;
+    font-size: 17px;
+}
+
+/* banner */
+.main-banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.banners {
+    width: 70%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.banner-1, .banner-2, .banner-3 { 
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: center;
+    display: none; 
+}
+
+.banner-1 {
+    background-image: url(https://i.pinimg.com/564x/6c/9a/5d/6c9a5dc101d2fa764e4dadb4a485d9a2.jpg);
+}
+
+.banner-2 {
+    background-image: url(https://i.pinimg.com/564x/e9/21/c8/e921c81a2c7bf4ce3961eb456d28abb4.jpg);
+}
+
+.banner-3 {
+    background-image: url(https://i.pinimg.com/564x/85/3b/06/853b069b4a6e2a49143552e7cf81cde0.jpg);
+}
+
+.banners .active {
+    display: block; 
+}
+
+/* profile */
+.main-item{
+    display: flex;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    
+}
+.item-icon{
+    height: 60px;
+    width: 60px;
+    background-image: url(https://i.pinimg.com/736x/7e/b1/5a/7eb15a2edb10566a8afa8b332210b174.jpg);
+    border-radius: 50%;
+    margin: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item-text{
+    padding-top: 10px;
+}
+
+/* form */
+.main-form {
+    background-color: #6f7672;
+    max-width: 50vh;
+    min-height: 80vh;
+    padding: 20px 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    box-sizing: border-box;
+}
+
+input{
+    color:darkslategray;
+    background-color: #efefef;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 5px 5px;
+    display:block;
+    width: auto;
+    height: 30px;
+    color: grey;
+}
+
+.contact{
+    font-size: 30px;
+}
+.text-contact{
+    padding-bottom: 10px;
+}
+select{
+    color:darkslategray;
+    background-color: #efefef;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 5px 5px;
+    display:block;
+    width: 100%;
+    height: 40px;
+    color: grey;
+}
+
+input#send{
+    background-color: #323f36;
+    border: 1px solid #99a098;
+    border-radius: 5px;
+    padding: 5px 5px;
+    display:block;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 40px;
+    color: white;
+}
+
+input#send:hover{
+    color: rgb(200, 173, 40);
+    background-color: rgb(36, 41, 39);
+    cursor: pointer;
+}
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    padding-bottom: 30px;
+    padding-top: 5px;
+}
+
+
+/* text */
+.main-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.496);
+    width: auto;
+    margin-top: 10%;
+}
+
+.list-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.list-text h2 {
+    font-size: 40px;
+    font-family: Gill Sans MT;
+    margin-bottom: 20px;
+    color: #e9edf1;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.text {
+    background-color: #a49b9bb6;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 40px); /* Adjust this to control the number of columns */
+    box-sizing: border-box;
+}
+
+/* menu */
+.title-menu{
+    text-align: center;
+    font-size: 50px;
+    padding: 50px;
+    font-family: Gill Sans MT;
+    background-color: rgba(219, 236, 219, 0.221);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.496);
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.496);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+}
+.pasta, .teriyaki, .mushroom, .thai, .honey, .butter {
+    width: 60vh;
+    height: 30vh;
+    gap:30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pasta {
+    background-image: url(https://i.pinimg.com/564x/ed/fe/70/edfe707565f7a35c947e54162e9fc3ab.jpg);
+}
+
+.teriyaki {
+    background-image: url(https://i.pinimg.com/564x/4f/d4/65/4fd465a436ae13b1f477a1ca1650bdeb.jpg);
+}
+
+.mushroom {
+    background-image: url(https://i.pinimg.com/564x/16/77/38/167738cc70be634c709bbe50bf4f29f6.jpg);
+}
+
+.thai {
+    background-image: url(https://i.pinimg.com/564x/b3/52/1b/b3521b14949bc953fad65d1337df40f1.jpg);
+}
+
+.honey {
+    background-image: url(https://i.pinimg.com/736x/54/33/a5/5433a5f6599c086549a771ff95240e25.jpg);
+}
+
+.butter {
+    background-image: url(https://i.pinimg.com/564x/24/5e/ba/245ebaf1263024336b83aa32613bf87e.jpg);
+}
+
+.menu-item:hover .pasta, .menu-item:hover .teriyaki, .menu-item:hover .mushroom, .menu-item:hover .thai, .menu-item:hover .honey, .menu-item:hover .butter {
+    transform: scale(1.1); 
+}
+.menu-item h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+/* clossing argument */
+.closing {
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    padding: 20px 100px;
+    margin-top: 100px;
+    text-align: center;
+    background: rgba(219, 236, 219, 0.221);
+}
+.closing h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: Gill Sans MT;
+}
+
+.closing p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #323f36;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    color: rgb(200, 173, 40);
+    background-color: rgb(36, 41, 39);
+    cursor: pointer;
+}
+
+
+/* footer */
+.footer{
+    padding: 30px;
+    background-color:#e57727;
+    text-align: center;
+    line-height: 10px;
+}
+.footer-icon{
+    width: 150px;
+    height: 50px;
+    background-image: url(https://i.pinimg.com/564x/73/97/1e/73971ef28c30683dbbf103a8b863699b.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    display: block;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+.footer-text{
+    color:white;
+    font-size: 1em;
+    position: relative;
+    text-decoration: none;
+    list-style: none; 
+    padding-top: 10px;  
+}
+
+
+/* responsive */
+@media only screen and (max-width:500px){
+    .main-banner{
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .banners{
+        width: 70%;
+        height: 30vh;
+        margin-bottom: 90%;
+    }
+    .banner-1, .banner-2, .banner-3{
+        height: 80%;
+        width: 100%;
+        position: relative;
+    }
+    .main-item{
+        flex-wrap: wrap;
+    }
+    h1{
+        font-size: 22px;
+    }
+    .main-form{
+        width: auto;
+        height: auto;
+        font-size: smaller;
+        margin-left: 0;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.003);
+    }
+    .main-list {
+        margin-top:140%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+    .pasta, .teriyaki, .mushroom, .thai, .honey, .butter{
+        width: 40vh;
+        position: relative;
+    }
+    .closing{
+        font-size: smaller;
+        padding: 10px 5px;
+    }
+}
+
+@media only screen and (min-width: 720px){
+    nav{
+        flex-direction: row;
+        padding:12px;
+    }
+    .main-form{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 1500px){
+    .banners{
+        width: 70%;
+        height: 60vh;
+    
+    }
+}
+@media only screen and (min-width: 425px){
+    
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    
+}
+

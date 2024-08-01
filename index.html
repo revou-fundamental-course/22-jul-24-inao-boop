@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <!-- nav -->
     <nav>
         <header>
             <div class="logo-icon"></div>
         </header>
       
+        <!-- nav item -->
         <section class="nav-container">
             <a class="nav-item" href="">Home</a>
             <a class="nav-item" href="">Our Menu</a>
@@ -19,54 +22,68 @@
         </section>
     </nav>
 
+    <!-- main content -->
     <main>
-        <article>
+        <!-- title -->
+        <aticle>
             <header class="main-title">
                 <h1>Welcome to Our Recipe Collection</h1>
             </header>
 
             <p class="second-title">Delicious Recipes for Every Occasion</p>
-        </article>
+        </aticle>
 
+        <!-- banner -->
         <section>
             <article class="main-banner">
-                <div class="banner"></div>
+                <div class="banners">
+                    <div class="banner banner-1"></div>
+                    <div class="banner banner-2"></div>
+                    <div class="banner banner-3"></div>
+                    
+                    <!-- banner text -->
+                    <p class="banner-text"><i>"Yummy Plates for Every Moments"</i></p>
 
-                <form class="main-form">
+                    <!-- profile -->
+                    <div class="main-item">
+                        <div class="item-icon"></div>
+        
+                        <div class="item-text">
+                            <h3>Angelina Mauren Lorent</h3>
+                            <p>Professional Cook, 38</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- form -->
+                <form class="main-form" id="contactForm">
                     <p class="contact"><b>Contact Us</b></p>
                     <p class="text-contact">Admin will contact you 1x24 hours after we receive the data.</p>
-
+                
                     <label for="name">Your Name:</label><br>
                     <input id="name" type="text" placeholder="First and last name">
-
+                    <div id="nameError" class="error-message"></div>
+                
                     <label for="email">Email Address:</label><br>
                     <input id="email" type="email" placeholder="example@email.com">
-
+                    <div id="emailError" class="error-message"></div>
+                
                     <label for="select">What are you interested in?</label><br>
                     <select id="select">
-                        <option>Select option</option>
-                        <option>Asian Food</option>
-                        <option>Western Food</option>
+                        <option value="">Select option</option>
+                        <option value="asian">Asian Food</option>
+                        <option value="western">Western Food</option>
                     </select>
-
+                    <div id="selectError" class="error-message"></div>
+                
                     <input type="submit" id="send" value="SEND">
                 </form>
             </article>
-
-            <p class="banner-text"><i>"Yummy Plates for Every Moments"</i></p>
-
-            <div class="main-item">
-                <div class="item-icon"></div>
-
-                <div class="item-text">
-                    <h3>Angelina Mauren Lorent</h3>
-                    <p>Professional Cook, 38</p>
-                </div>
-            </div>
-            
         </section>
 
         <section>
+            <!-- benefits text -->
             <article class="main-list">
                 <div class="list-text">
                     <h2>Discover the Benefits of Our Food Recipes</h2>
@@ -80,10 +97,11 @@
                             <p>Find suggested alternative ingredients in the recipes, ensuring you can adjust the dish to suit your preferences or dietary needs.</p>
                         </div>
                 </div>
-                
             </article>
 
             <article class="main-article">
+
+                <!-- our menu -->
                 <h1 class="title-menu">Our Menu</h1>
 
                 <div class="menu">
@@ -101,7 +119,7 @@
                     </div>
                     <div class="menu-item">
                         <a class="thai" href=""></a>
-                        <h2>Thai Chicken Meal Prep Bowls with Peanut Sauce</h2>
+                        <h2>Thai Chicken with Peanut Sauce</h2>
                     </div>
                     <div class="menu-item">
                         <a class="honey" href=""></a>
@@ -115,6 +133,7 @@
             </article>
 
             <article>
+                <!-- closing argument -->
                 <div class="closing">
                     <h1>Find More Recipe Inspirations on Our Website!</h1>
                     <p>
@@ -127,6 +146,7 @@
         </section>
     </main>
 
+    <!-- footer -->
     <footer class="footer">
         <div class="footer-icon"></div>
         <div class="footer-text">
@@ -136,6 +156,7 @@
         </div>
     </footer>
 
+    <!-- javascript -->
     <script src="js/script.js"></script>
 </body>
 </html>
